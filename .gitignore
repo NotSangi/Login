@@ -1,2 +1,5 @@
 #Configuration
 .env
+
+#Directories
+**/__pycache__
