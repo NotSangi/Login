@@ -1,0 +1,218 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+header, footer {
+  flex-shrink: 0;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  background-color: rgb(11, 19, 32);
+  height: 80px;
+}
+header a {
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0 15px 0 15px;
+}
+header div {
+  padding: 15px;
+}
+header .logo {
+  width: 10%;
+}
+header .main_links {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+header .main_links a {
+  color: #8799b5;
+  transition: 0.3s;
+}
+header .main_links a:hover {
+  color: #9fef00;
+}
+header .auth_links {
+  width: 20%;
+  text-align: right;
+  display: flex;
+}
+header .auth_links div a {
+  color: #8799b5;
+  transition: 0.3s;
+}
+header .auth_links div a:hover {
+  color: #9fef00;
+}
+header .auth_links div .button {
+  width: 100%;
+  padding: 15px;
+  background-color: #9fef00;
+  color: #141d2b;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+header .auth_links div .button:hover {
+  background-color: #5ce60c;
+  cursor: pointer;
+}
+header .auth_links div .button {
+  padding: 12px;
+}
+header .auth_links div .button:hover {
+  color: #141d2b;
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(11, 19, 32);
+  width: 100%;
+  color: #9fef00;
+}
+
+.main {
+  background-color: #151f2e;
+}
+
+.main-section {
+  flex-grow: 1;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-section .titles-auth {
+  width: 100%;
+  color: white;
+  text-align: left;
+}
+.main-section .login-form {
+  width: 400px;
+  height: 350px;
+}
+.main-section .login-form form {
+  background-color: #151f2e;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.main-section .login-form form .div-inputs {
+  flex-grow: 1;
+  padding: 25px;
+}
+.main-section .login-form form .div-inputs div {
+  margin: 0;
+  width: 100%;
+}
+.main-section .login-form form .div-inputs h2 {
+  font-size: 14px;
+  color: #8799b5;
+  text-align: left;
+}
+.main-section .login-form form .div-inputs .inputs {
+  background: #1e2939;
+  border: solid 0.7px #2b3747;
+  border-radius: 4px;
+  width: 95%;
+  height: 30px;
+  color: white;
+  padding: 0 10px 0 10px;
+}
+.main-section .login-form form .div-inputs .inputs:focus {
+  outline: none;
+  color: white;
+}
+.main-section .login-form form .div-inputs .button {
+  width: 100%;
+  padding: 15px;
+  background-color: #9fef00;
+  color: #141d2b;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+.main-section .login-form form .div-inputs .button:hover {
+  background-color: #5ce60c;
+  cursor: pointer;
+}
+.main-section .register-form {
+  width: 800px;
+  height: 600px;
+}
+.main-section .register-form form {
+  background-color: #151f2e;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+.main-section .register-form form .div-inputs {
+  flex-grow: 1;
+  padding: 25px;
+  flex-basis: calc(33.33% - 10px);
+}
+.main-section .register-form form .div-inputs div {
+  margin: 0;
+  width: 100%;
+}
+.main-section .register-form form .div-inputs h2 {
+  font-size: 14px;
+  color: #8799b5;
+  text-align: left;
+}
+.main-section .register-form form .div-inputs .inputs {
+  background: #1e2939;
+  border: solid 0.7px #2b3747;
+  border-radius: 4px;
+  width: 95%;
+  height: 30px;
+  color: white;
+  padding: 0 10px 0 10px;
+}
+.main-section .register-form form .div-inputs .inputs:focus {
+  outline: none;
+  color: white;
+}
+.main-section .register-form form .div-inputs .button {
+  width: 100%;
+  padding: 15px;
+  background-color: #9fef00;
+  color: #141d2b;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+.main-section .register-form form .div-inputs .button:hover {
+  background-color: #5ce60c;
+  cursor: pointer;
+}
+.main-section .register-form form .exception {
+  flex-basis: 100%;
+}
+
+.auth {
+  background: linear-gradient(180deg, rgb(11, 19, 32) 0%, rgb(24, 30, 41) 100%);
+}
+
+/*# sourceMappingURL=desktop.css.map */

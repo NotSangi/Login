@@ -3,24 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/desktop.css">
+    <link rel="stylesheet" href="">
     <title>Login App</title>
 </head>
-<body>
+<body class="{%block bg%}{%endblock%}">
     <header>
-        <div>
-            <a href="{{url_for('auth.index')}}">Main Page</a>
-            {%if current_user.is_authenticated %}
-                <a href="{{url_for('auth.logout')}}">Logout</a>
-            {%else%}
-                <a href="{{url_for('auth.login')}}">Login</a>
-                <a href="{{url_for('auth.register')}}">Register</a>
-            {%endif%}   
+        {% if request.path != '/login' and request.path != '/register' %}
+        <div class="logo">
+            <img src="" alt="">
         </div>
+        <nav class="main_links">
+            <div>
+                <a href="{{url_for('auth.index')}}">Main Page</a>
+            </div>
+        </nav>
+        <div class="auth_links">
+            {%if current_user.is_authenticated %}
+                <div>  
+                    <a href="{{url_for('auth.logout')}}">Logout</a>
+                </div>
+            {%else%}
+                <div>
+                    <a href="{{url_for('auth.login')}}">Login</a>
+                </div>
+                <div>
+                    <a class="button" href="{{url_for('auth.register')}}">Register</a>
+                </div>
+                
+            {%endif%}
+        {%endif%}     
+            </div>
     </header>
     
-    <section>
+    <section class="main-section">
         {%block main_content%}
         {%endblock%}
     </section>
+    {% if request.path != '/login' and request.path != '/register' %}
+    <footer>
+        <h2>copyright</h2>
+    </footer>
+    {%endif%}
 </body>
 </html>

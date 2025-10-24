@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+
+{%block bg%}auth{%endblock%}
+
+{%block main_content%}
+    <h2 class="titles-auth">REGISTER</h2>
+    <div class="register-form">
+        <form method="POST">
+            {{form.hidden_tag()}}
+            <div class="div-inputs">
+                <h2>{{form.name.label}}</h2>
+                <div>{{form.name(class="inputs", autocomplete="off")}}</div>
+            </div>
+            <div class="div-inputs">
+                <h2>{{form.last_name.label}}</h2>
+                <div>{{form.last_name(class="inputs", autocomplete="off")}}</div>
+            </div>
+            <div class="div-inputs">
+                <h2>{{form.user_name.label}}</h2>
+                <div>{{form.user_name(class="inputs", autocomplete="off")}}</div>
+            </div>
+            <div class="div-inputs">
+                <h2>{{form.age.label}}</h2>
+                <div>{{form.age(class="inputs", autocomplete="off")}}</div>
+            </div>
+            <div class="div-inputs exception">
+                <h2>{{form.email.label}}</h2>
+                <div>{{form.email(class="inputs", autocomplete="off")}}</div>
+            </div>
+            <div class="div-inputs">
+                <h2>{{form.password.label}}</h2>
+                <div>{{form.password(class="inputs", autocomplete="off")}}</div>
+            </div>
+            <div class="div-inputs">
+                <h2>{{form.password_check.label}}</h2>
+                <div>{{form.password_check(class="inputs", autocomplete="off")}}</div>
+            </div>
+            <div class="div-inputs">
+                <div>{{form.button(class="button")}}</div>
+            </div>
+                
+        </form>
+    </div>
+{%endblock%}

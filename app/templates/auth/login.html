@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block bg%}auth{%endblock%}
+
+{%block main_content%}
+    <h2 class="titles-auth">LOGIN</h2>
+    <div class="login-form">
+        <form method="POST">
+            {{form.hidden_tag()}}
+            <div class="div-inputs">
+                <h2>{{form.user_name.label}}</h2>
+                <div>{{form.user_name(class="inputs", autocomplete="off")}}</div>
+            </div>
+            <div class="div-inputs">
+                <h2>{{form.password.label}}</h2>
+                <div>{{form.password(class="inputs", autocomplete="off")}}</div>
+            </div>
+            <div class="div-inputs">
+                <div>{{form.button(class="button")}}</div>
+            </div>
+        </form>
+    </div>
+{%endblock%}
+    

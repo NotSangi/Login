@@ -1,0 +1,60 @@
+@use "variables";
+
+@mixin button() {
+    width: 100%;
+    padding: 15px;
+    background-color: variables.$fourth_color;
+    color: variables.$third_font_color;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: variables.$fifth_color;
+        cursor: pointer;
+    }
+}
+
+@mixin inputs() {
+    background: variables.$third_color;
+    border: solid 0.7px #2b3747;
+    border-radius: 4px;
+    width: 95%;
+    height: 30px;
+    color: variables.$main_font_color;
+    padding: 0 10px 0 10px;
+
+    &:focus {
+        outline: none;
+        color: variables.$main_font_color;
+    }
+}
+
+@mixin form-titles() {
+    font-size: 14px;
+    color: variables.$second_font_color;
+    text-align: left;
+
+}
+
+@mixin form-similarities(){
+
+    div{
+        margin:0;
+        width: 100%;
+    }
+
+    h2{
+        @include form-titles()
+    }
+
+    .inputs{
+        @include inputs()
+    }
+
+    .button{
+        @include button()
+    }
+}

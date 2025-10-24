@@ -29,7 +29,7 @@ def login():
                 if next_page is None or not next_page[0] == '/':
                     next_page = url_for('auth.welcome')
                 return redirect(next_page)
-    return render_template('login.html', form=form)
+    return render_template('auth/login.html', form=form)
 
 @auth_routes.route("/logout")
 @login_required
@@ -53,7 +53,7 @@ def register():
         bd.session.add(user)
         bd.session.commit()
         return redirect(url_for('auth.login'))
-    return render_template('register.html', form=form)
+    return render_template('auth/register.html', form=form)
 
             
             
