@@ -29,33 +29,41 @@ header div {
 }
 header .logo {
   width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-header .main_links {
+header .logo img {
+  max-height: 100%;
+}
+header .main-links {
   width: 70%;
   text-align: center;
   display: flex;
   align-items: center;
 }
-header .main_links a {
+header .main-links a {
   color: #8799b5;
   transition: 0.3s;
+  font-size: 17px;
+  font-weight: bold;
 }
-header .main_links a:hover {
+header .main-links a:hover {
   color: #9fef00;
 }
-header .auth_links {
+header .auth-links {
   width: 20%;
   text-align: right;
   display: flex;
 }
-header .auth_links div a {
+header .auth-links div a {
   color: #8799b5;
   transition: 0.3s;
 }
-header .auth_links div a:hover {
+header .auth-links div a:hover {
   color: #9fef00;
 }
-header .auth_links div .button {
+header .auth-links div .button {
   width: 100%;
   padding: 15px;
   background-color: #9fef00;
@@ -66,14 +74,14 @@ header .auth_links div .button {
   border-radius: 3px;
   transition: 0.3s;
 }
-header .auth_links div .button:hover {
+header .auth-links div .button:hover {
   background-color: #5ce60c;
   cursor: pointer;
 }
-header .auth_links div .button {
+header .auth-links div .button {
   padding: 12px;
 }
-header .auth_links div .button:hover {
+header .auth-links div .button:hover {
   color: #141d2b;
 }
 
@@ -88,9 +96,67 @@ footer {
   background-color: #151f2e;
 }
 
+.section-about-me {
+  width: 70%;
+  background-color: #203000;
+  border: 1px solid #304800;
+  border-radius: 15px;
+  padding: 60px;
+  transition: all 0.3s;
+}
+.section-about-me:hover {
+  transform: scale(1.02);
+}
+.section-about-me h2 {
+  color: #9fef00;
+  width: fit-content;
+  padding: 10px 15px 10px 15px;
+  border-radius: 25px;
+  background-color: #304800;
+  margin: 0;
+}
+.section-about-me .title-am {
+  padding-bottom: 20px;
+}
+.section-about-me .img-text-am {
+  margin: 0;
+  display: flex;
+}
+.section-about-me .img-text-am .div-img-am {
+  width: 40%;
+  border-radius: 40px;
+  background-color: #304800;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-about-me .img-text-am .div-img-am figure {
+  width: fit-content;
+}
+.section-about-me .img-text-am .div-img-am figure img {
+  border-radius: 40px;
+  max-width: 100%;
+}
+.section-about-me .img-text-am .div-text-am {
+  width: 60%;
+  padding: 40px;
+}
+.section-about-me .img-text-am .div-text-am p {
+  color: #9fef00;
+  margin: 0;
+  font-size: 25px;
+}
+
+.my-alert {
+  background-color: #9fef00;
+  color: #304800;
+  border-color: #203000;
+}
+
 .main-section {
   flex-grow: 1;
-  padding: 15px;
+  padding: 50px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -168,7 +234,7 @@ footer {
 .main-section .register-form form .div-inputs {
   flex-grow: 1;
   padding: 25px;
-  flex-basis: calc(33.33% - 10px);
+  flex-basis: calc(50% - 10px);
 }
 .main-section .register-form form .div-inputs div {
   margin: 0;
@@ -213,6 +279,11 @@ footer {
 
 .auth {
   background: linear-gradient(180deg, rgb(11, 19, 32) 0%, rgb(24, 30, 41) 100%);
+}
+
+.title-welcome {
+  color: white;
+  font-size: 35px;
 }
 
 /*# sourceMappingURL=desktop.css.map */

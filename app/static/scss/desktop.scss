@@ -37,9 +37,16 @@ height: 80px;
 
     .logo{
         width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            max-height: 100%;
+        }
     }
 
-    .main_links{
+    .main-links{
         width: 70%;
         text-align: center;
         display: flex;
@@ -48,14 +55,15 @@ height: 80px;
         a{
             color: variables.$second_font_color;
             transition: variables.$buttons_transitions;
-            
+            font-size: 17px;
+            font-weight: bold;
             &:hover{
                 color:  variables.$fourth_color;    
             }
         }
     }
 
-    .auth_links{
+    .auth-links{
         width: 20%;
         text-align: right;
         display: flex;
@@ -93,13 +101,84 @@ footer{
 .main{
     background-color: variables.$second_color;
 }
+
+.section-about-me{
+    width: 70%;
+    background-color: variables.$sixth_color;
+    border: 1px solid variables.$seventh_color;
+    border-radius: 15px;
+    padding: 60px;
+    transition: all 0.3s;
+
+    &:hover{
+        transform: scale(1.02);
+    }
+
+    h2{
+        color: variables.$fourth_color;
+        width: fit-content;
+        padding: 10px 15px 10px 15px;
+        border-radius: 25px;
+        background-color: variables.$seventh_color;
+        margin: 0;
+    }
+
+    .title-am{
+        padding-bottom: 20px;
+    }
+
+    .img-text-am{
+        margin: 0;
+        display: flex;
+
+        .div-img-am{
+            width: 40%;
+            border-radius: 40px;
+            background-color: variables.$seventh_color;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            figure{
+                width:  fit-content;
+                
+                img{
+                    border-radius: 40px;
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .div-text-am{
+            width: 60%;
+            padding: 40px;
+            
+            p{
+                color: variables.$fourth_color;
+                margin: 0;
+                font-size: 25px;
+            }
+        }
+
+        
+    }
+
+}
 //END INDEX
 
 
 //LOGIN AND REGISTER
+
+.my-alert{
+    background-color: variables.$fourth_color;
+    color: variables.$seventh_color;
+    border-color: variables.$sixth-color;
+}
+
 .main-section{
     flex-grow: 1;
-    padding: 15px;
+    padding: 50px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -147,7 +226,7 @@ footer{
             .div-inputs{
                 flex-grow: 1;
                 padding: 25px;
-                flex-basis: calc(33.33% - 10px);
+                flex-basis: calc(50% - 10px);
 
                 @include util.form-similarities()
             }
@@ -164,4 +243,9 @@ footer{
 }
 //END LOGIN AND REGISTER
 
-
+//WELCOME
+.title-welcome{
+    color: variables.$main_font_color;
+    font-size: 35px;
+}
+//END WELCOME
